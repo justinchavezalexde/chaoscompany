@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F1F8"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Práctica 5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titulo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/titulo1"
+        app:layout_constraintBottom_toTopOf="@id/campoNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Nombre -->
+    <EditText
+        android:id="@+id/campoNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:backgroundTint="#BDBDBD"
+        app:layout_constraintTop_toBottomOf="@id/titulo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="40dp"/>
+
+    <!-- Correo -->
+    <EditText
+        android:id="@+id/campoCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="E - MAIL"
+        android:backgroundTint="#BDBDBD"
+        app:layout_constraintTop_toBottomOf="@id/campoNombre"
+        app:layout_constraintStart_toStartOf="@id/campoNombre"
+        app:layout_constraintEnd_toEndOf="@id/campoNombre"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/campoPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:backgroundTint="#BDBDBD"
+        app:layout_constraintTop_toBottomOf="@id/campoCorreo"
+        app:layout_constraintStart_toStartOf="@id/campoCorreo"
+        app:layout_constraintEnd_toEndOf="@id/campoCorreo"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Botón Aceptar -->
+    <Button
+        android:id="@+id/botonAceptar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ACEPTAR"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#673AB7"
+        app:layout_constraintTop_toBottomOf="@id/campoPassword"
+        app:layout_constraintStart_toStartOf="@id/campoPassword"
+        app:layout_constraintEnd_toStartOf="@id/botonCancelar"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Botón Cancelar -->
+    <Button
+        android:id="@+id/botonCancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CANCELAR"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#673AB7"
+        app:layout_constraintTop_toTopOf="@id/botonAceptar"
+        app:layout_constraintStart_toEndOf="@id/botonAceptar"
+        app:layout_constraintEnd_toEndOf="@id/campoPassword"
+        android:layout_marginStart="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

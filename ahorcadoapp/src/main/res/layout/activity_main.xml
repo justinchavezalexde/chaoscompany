@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:text="APP Ahorcado"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtPalabra"
+        android:text="_ _ _ _"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edtLetra"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa una letra"
+        android:maxLength="1"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <!--  MENSAJE DE PRESIÓN (AQUÍ VA) -->
+    <TextView
+        android:id="@+id/txtPresion"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FF0000"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnIntentar"
+        android:text="Adivinar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/imgAhorcado"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

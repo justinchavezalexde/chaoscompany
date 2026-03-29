@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <!-- Nombre -->
+
+        <!-- Correo -->
+
+        <EditText
+            android:id="@+id/campoNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="144dp"
+            android:hint="Nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/campoCorreo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/campoNombre"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Contraseña -->
+
+        <!-- Botón registrar -->
+        <EditText
+            android:id="@+id/campoClave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/campoCorreo"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/botonGuardar"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Registrar"
+            app:layout_constraintTop_toBottomOf="@id/campoClave"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/botonSalir" />
+
+        <!-- Botón cancelar -->
+        <Button
+            android:id="@+id/botonSalir"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Cancelar"
+            app:layout_constraintTop_toBottomOf="@id/campoClave"
+            app:layout_constraintStart_toEndOf="@id/botonGuardar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
