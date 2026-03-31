@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val btnCancelar = findViewById<Button>(R.id.botonSalir)
         val resultado = findViewById<TextView>(R.id.txtResultado)
 
-        // 🔹 Botón Registrar
+        //  Botón Registrar
         btnRegistrar.setOnClickListener {
 
             val n = nombre.text.toString()
@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
             } else {
 
-                // ✅ Toast requerido por la práctica
+                // Toast requerido por la práctica
                 Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
 
-                // ✅ Mostrar datos en la parte inferior
+                //  Mostrar datos en la parte inferior
                 resultado.text = """
                     Nombre: $n
                     Apellidos: $a
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                     Password: $p
                 """.trimIndent()
 
-                // 🔹 Limpiar campos
+                //  Limpiar campos
                 nombre.text.clear()
                 apellidos.text.clear()
                 correo.text.clear()
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // 🔹 Botón Cancelar
+        //  Botón Cancelar
         btnCancelar.setOnClickListener {
             finish()
         }
